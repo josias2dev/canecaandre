@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+body {
+    background-color: black;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: calc(100vh - 100px);
+    position: relative;
+}
+h3 {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.carrousel {
+    display: flex;
+    overflow-x: scroll;
+    width: 100vw;
+    gap: 9px;
+    z-index: 9999;
+}
+.carrousel img {
+    width: 130px;
+    height: 150px;
+    border-radius: 8px;
+}
+.equipe img {
+    width: 280px;
+}
+.texto {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    padding: 8px;
+}
+.logo {
+    width: 120px;
+}
+.morango {
+    z-index: 99;
+    position: absolute;
+}
