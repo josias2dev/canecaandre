@@ -11,7 +11,10 @@
 </head>
 
 <body>
-    <div class="content"> 
+    <audio autoplay>
+        <source src="toqueSilencio.mp3" type="audio/ogg">
+    </audio>
+    <div class="content">
         <div class="morango">
             <img src="giphy.gif" alt="Chuva de morango">
         </div>
@@ -58,6 +61,19 @@
             </svg>
         </div>
     </div>
+    <script>
+        let count = 0;
+        document.querySelector('.equipe').addEventListener('click', function () {
+            count++
+            if (count == 20) {
+                window.open('https://www.youtube.com/embed/xEB4sIIUpMU')
+            }
+        });
+        document.body.addEventListener('click', function (e) {
+            //tocar a tag audio do html
+            document.querySelector('audio').play();
+        });
+    </script>
 </body>
 
 </html>

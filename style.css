@@ -48,6 +48,6 @@ h3 {
     width: 120px;
 }
 .morango {
-    z-index: 99;
+    z-index: -11;
     position: absolute;
 }
