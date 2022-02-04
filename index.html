@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    
+    <div id="myCarousel" class="carousel"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script>
+        // Fancybox.bind('[data-fancybox="gallery"]', {
+        //     Thumbs: {
+        //         Carousel: {
+        //             fill: false,
+        //             center: true,
+        //             close : false 
+        //         },
+        //     },
+        // });
+
+        const myCarousel = new Carousel(document.querySelector("#myCarousel"), {
+  slides: [
+    { html: "<img src='imagens/IMG_20200828_123353.jpg'>" },
+    { html: "Second slide" },
+    { html: "Third slide" },
+  ],
+});
+    </script>
+</body>
+
+</html>
