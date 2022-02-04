@@ -65,13 +65,18 @@
         let count = 0;
         document.querySelector('.equipe').addEventListener('click', function () {
             count++
-            if (count == 20) {
-                window.open('https://www.youtube.com/embed/xEB4sIIUpMU')
+            if (count == 10) {
+                const boloDeMorango = document.createElement('div')
+                boloDeMorango.innerHTML = `<iframe width="1366" height="617" src="https://www.youtube.com/embed/xEB4sIIUpMU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" autoplay="" style="
+                    width: 100vw;
+                "></iframe>`
+                document.body.appendChild(boloDeMorango)
+                document.querySelector('audio') && document.querySelector('audio').remove()
             }
         });
         document.body.addEventListener('click', function (e) {
             //tocar a tag audio do html
-            document.querySelector('audio').play();
+            document.querySelector('audio') && document.querySelector('audio').play();
         });
     </script>
 </body>
