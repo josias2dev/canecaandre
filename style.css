@@ -55,17 +55,3 @@ h3 {
     z-index: -11;
     position: absolute;
 }
-
-.bolo-de-morangou .morango img{
-    position: absolute;
-    z-index: 99999999;
-    width: 100vw;
-    pointer-events: none;
-}
-
-.bolo-de-morangou .morango{
-    z-index: 99;
-    inset: 0;
-    width: 100vw;
-    height: 100vh;
-}
