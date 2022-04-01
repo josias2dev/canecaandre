@@ -5,36 +5,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-    <link rel="stylesheet" href="style.css?3">
-    <title>Caneca - Bruna</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Caneca - André</title>
+    <audio id="bobmarley" src="https://youtu.be/CHekNnySAfM" autoplay loop></audio>
 </head>
 
 <body>
-    <audio autoplay>
-        <source src="toqueSilencio.mp3" type="audio/ogg">
-    </audio>
     <div class="content">
-        <div class="morango">
-            <img src="giphy.gif" alt="Chuva de morango">
+        <div id="bobzinho" style="display: none;">
+            <img src="/assets/bobzinho.png" alt="">
         </div>
-        <h3>Obrigado por tanto, Bruna! ❤</h3>
+        <h3>Obrigado por tudo Andrézão!
+            <div class="morango">
+                <img src="/assets/andreGirando.gif" alt="">
+            </div>
+        </h3>
         <div class="carrousel">
-            <img src="img7.png" alt="Caneca">
-            <img src="img1.png" alt="Caneca">
-            <img src="img2.png" alt="Caneca">
-            <img src="img5.png" alt="Caneca">
-            <img src="img8.png" alt="Caneca">
-            <img src="img6.png" alt="Caneca">
-            <img src="img3.png" alt="Caneca">
-            <img src="img4.png" alt="Caneca">
+            <img src="/assets/andre1.jpg" alt="Caneca">
+            <img src="/assets/andre2.jpg" alt="Caneca">
+            <img src="/assets/andre3.jpg" alt="Caneca">
+            <img src="/assets/andre4.jpg" alt="Caneca">
+            <img src="/assets/andre5.jpg" alt="Caneca">
+            <img src="/assets/andre6.jpg" alt="Caneca">
+            <img src="/assets/andre7.jpg" alt="Caneca">
         </div>
         <div class="equipe">
-            <img src="imgEquipe.jpg" alt="Equipe">
+            <img src="/assets/imgEquipe.jpg" alt="Equipe">
         </div>
         <div class="texto">
-            Rejane - Jaqueline Machado - Jaqueline Marcis - André - Flávio - Josias - Adriano Lopes - Alexandre -
-            Danielle - Matheus - Derek - Eduardo - Adriano Pecenin - Hansel
+            Rejane - Jaqueline Machado - Jaqueline Marcis - Flávio - Josias - Adriano Lopes - Alexandre -
+            Danielle - Matheus - Derek - Eduardo - Adriano Pecenin
         </div>
         <div class="logo">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 465.45 167.41">
@@ -61,26 +63,24 @@
             </svg>
         </div>
     </div>
-    <script>
-        let count = 0;
-        document.querySelector('.equipe').addEventListener('click', function () {
-            count++
-            if (count == 10) {
-                const boloDeMorango = document.createElement('div')
-                boloDeMorango.innerHTML = `<iframe width="1366" height="617" src="https://www.youtube.com/embed/xEB4sIIUpMU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" autoplay="" style="
-                    width: 100vw;
-                "></iframe>`
-                document.body.appendChild(boloDeMorango)
-                document.querySelector('audio') && document.querySelector('audio').remove()
-
-                document.body.classList.add('bolo-de-morangou')
+</body>
+<script>
+    const equipe = document.querySelector('.equipe');
+    const bobmarley = document.getElementById('bobmarley');
+    const bobzinho = document.getElementById('bobzinho');
+    var audio = new Audio('/audio/bobmarley.mp3');
+    if (equipe) {
+        var counter = 0;
+        equipe.addEventListener('click', function (e) {
+            counter++;
+            if (counter == 10) {
+                bobzinho.style.display = 'block';
+                setTimeout(function () {
+                    bobmarley.play();
+                    audio.play();
+                }, 100);
             }
         });
-        document.body.addEventListener('click', function (e) {
-            //tocar a tag audio do html
-            document.querySelector('audio') && document.querySelector('audio').play();
-        });
-    </script>
-</body>
-
+    }
+</script>
 </html>
